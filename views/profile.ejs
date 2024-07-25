@@ -1,0 +1,97 @@
+<%- include("./header.ejs") %> 
+<br><br><br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h1 class="card text-success text-center" style="background-color: rgba(243, 173, 184, 0.196)">PROFILE</h1>
+      <div class="card" style="padding: 10px; background-color: rgba(243, 173, 184, 0.196)">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="<%= image.url %>" class="w-100" alt="User Image" />
+          </div>
+          <div class="col-md-7">
+            <h4 class="mt-5">Name: <span class="text-info"><%= uname %></span></h4>
+            <br />
+            <h4>E-mail: <span class="text-info"><%= email %></span></h4>
+            <br />
+            <!-- <h4>Mobile no: <span class="text-info"><%= mobile_no %></span></h4> -->
+            <center>
+                <button data-bs-toggle="modal" data-bs-target="#updateprofile" class="btn btn-primary mt-3">Update profile</button>
+
+                <button data-bs-toggle="modal" data-bs-target="#ChangePassword" class="btn btn-info mt-3">Change Password</button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    <!--updateProfile Modal -->
+    <div class="modal fade" id="updateprofile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Update</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          </div>
+          <div class="modal-body">
+            <form action="/updateProfile" method="post" enctype="multipart/form-data" >
+              <div class="mb-3">
+                <label for="">Name</label>
+                <input type="text" value="<%= uname %>" name="name" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">Email</label>
+                <input type="text" value="<%= email %>" name="email" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">Image</label>
+                <input type="file" name="image" class="form-control" />
+                <img src="<%= image.url %>" alt="" width="50" />
+              </div>
+
+              <button type="submit" class="btn btn-success">Update Profile</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End updateProfile Modal -->
+
+    <!--Change Password Modal -->
+    <div class="modal fade" id="ChangePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Password</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          </div>
+          <div class="modal-body">
+            <form action="/changePassword" method="post">
+              <div class="mb-3">
+                <label for="">Old Password</label>
+                <input type="text" name="op" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">New Password</label>
+                <input type="password" name="np" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="">Confirm Password</label>
+                <input type="password" name="cp" class="form-control" />
+              </div>
+              <button type="submit" class="btn btn-success">
+                Change Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Change Password Modal -->
+  </div>
+  <!-- row end -->
+</div>
+<!-- container end -->
+
+<%- include("./footer.ejs") %>

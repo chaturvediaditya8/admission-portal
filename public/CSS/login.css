@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.a1{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    background: rgba(0,0,0,0.7);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 90px;
+    /* background: linear-gradient(yellow,white); */
+}

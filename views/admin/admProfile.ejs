@@ -1,0 +1,89 @@
+<%- include('./header.ejs') %>
+<%- include('./sidebar.ejs') %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Update Profile</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Update Profile</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    <br><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="card text-success text-center" style="background-color: rgba(243, 173, 184, 0.196)">PROFILE</h1>
+          <div class="card" style="padding: 10px; background-color: rgba(243, 173, 184, 0.196)">
+            <div class="row">
+              <div class="col-md-5">
+                <img src="<%= image.url %>" class="w-100" alt="User Image" />
+              </div>
+              <div class="col-md-7">
+                <h4 class="mt-5">
+                  Name: <span class="text-info"><%= uname %></span>
+                </h4>
+                <br />
+                <h4>E-mail: <span class="text-info"><%= email %></span></h4>
+                <br />
+                <!-- <h4>Mobile no: <span class="text-info"><%= mobile_no %></span></h4> -->
+               <button data-bs-toggle="modal" data-bs-target="#updateprofile" class="btn btn-primary mt-3">Update profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <!--updateProfile Modal -->
+        <div class="modal fade" id="updateprofile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Update</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="/upadmProfile" method="post" enctype="multipart/form-data">
+                  <div class="mb-3">
+                    <label for="">Name</label>
+                    <input type="text" value="<%= uname %>" name="name" class="form-control"/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="">Email</label>
+                    <input type="text" value="<%= email %>" name="email" class="form-control"/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="">Image</label>
+                    <input type="file" name="image" class="form-control" />
+                    <img src="<%= image.url %>" alt="" width="50" />
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Update Profile
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End updateProfile Modal -->
+      </div>
+      <!-- row end -->
+    </div>
+    <!-- container end -->
+  </div>
+  <!-- /.content-header -->
+</div>
+<!-- content Wrapper -->
+<%-include('./footer.ejs') %>

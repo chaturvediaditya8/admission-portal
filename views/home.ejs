@@ -1,0 +1,353 @@
+<%- include("./header.ejs") %>
+    <!-- carousel start -->
+    <div class="carousel slide" data-bs-ride="carousel" id="pn">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#pn" data-bs-slide-to="0" class="active"> </button>
+            <button type="button" data-bs-target="#pn" data-bs-slide-to="1"> </button>
+            <button type="button" data-bs-target="#pn" data-bs-slide-to="2"> </button>
+        </div>
+        <!-- div carousel indicator ends -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="image/classroom.jpg" alt="" class="w-100 sl">
+            </div>
+            <div class="carousel-item " data-bs-interval="4000">
+                <img src="image/building.jpg" alt="" class="w-100 sl">
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="image/Ranking.jpg" alt="" class="w-100 sl">
+            </div>
+        </div>
+        <!-- carousel inner ends -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#pn" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pn" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- carousel ends -->
+    </div>
+    <!-- main body -->
+    <div class="main"><br>
+        <div class="container mt-5">
+            <h1 class="text-center mb-5 ">Welcome <b class="text-info">User</b></h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-lg" style="height:200px">
+                        <p style="text-align: justify; margin:10px">Getting started a new job involves a lot of choices.
+                            This quick reference guide is designed to
+                            help you understand the many benefits available, and how to get started choosing the ones
+                            that
+                            are right for you </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg" style="height:200px">
+                        <p style="text-align: justify; margin:10px;">Medical, Dental, Vision and Supplemental health
+                            Your
+                            health is important to us, and we offer a
+                            wide range of health benefits to help take care of you and your family. ITM offers you a
+                            wide
+                            choice of medical plans.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-lg" style="height:200px">
+                        <p style="text-align: justify;margin:10px">Disability Life and Accidental Death and
+                            Dismemberment
+                            Insurance to help you to prepare for the
+                            unexpected. ITM offers insurance plans to provide a financial safety net for you and your
+                            family. Disability insurance replaces wages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container mt-5">
+            <h1 class="text-center mt-5">COU<span class="text-info">RSES</span> </h1>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card" style="height: 600px;">
+                        <img src="image/btech.png" alt="" class="w-100" style="padding:5px; aspect-ratio:3/2;">
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">B.Tech</h2>
+                            <p style="text-align: justify;">Bachelor of Technology (B.Tech) is an undergraduate
+                                engineering
+                                degree program typically
+                                spanning four years. It offers specializations like Computer Science, Electrical,
+                                Mechanical, Civil, Electronics, Chemical, Information Technology, and Enviroment
+                                Engineering
+                            </p>
+                            <center>
+                               <% if(btech) { %>
+                                 <a href="/courseDisplay" class="btn btn-primary mt-5 binge"> Course Display</a>
+                                <% } else { %>
+                                    <button class="btn btn-primary mt-5 binge" data-bs-toggle="modal"
+                                    data-bs-target="#btech">Register</button>
+                                <% } %>
+                                
+                            </center>
+                            
+                        </div><!--card-body ends-->
+                    </div><!--card ends-->
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="height: 600px;">
+                        <img src="image/bca.jpeg" alt="" class="w-100" style="padding:5px; aspect-ratio:3/2">
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">BCA</h2>
+                            <p style="text-align: justify;">Bachelor of Computer Application (BCA) is an undergraduate
+                                degree program typically spanning
+                                three layers. It focuses on computer science software development and information
+                                technology. BCA covers areas such as programming languages, and web development</p>
+                            <center>
+                                <% if(bca) { %>
+                                    <a href="/courseDisplay" class="btn btn-primary mt-3 binge"> Course Display</a>
+                                   <% } else { %>
+                                       <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
+                                       data-bs-target="#BCA">Register</button>
+                                   <% } %>
+                            </center>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="height: 600px;">
+                        <img src="image/mca.jpeg" alt="" class="w-100" style="padding:5px; aspect-ratio:3/2">
+                        <div class="card-body">
+                            <h2 class="text-center">MCA</h2>
+                            <p style="text-align: justify;">Master of Compute Application (MCA) is a postgraduate
+                                professional degree in computer science
+                                and application. It is typically a two years program designed to provide advanced
+                                knowledge
+                                and skills in computer science, software development, and IT management.</p>
+                            <center>
+                                <% if(mca) { %>
+                                    <a href="/courseDisplay" class="btn btn-primary mt-3 binge"> Course Display</a>
+                                   <% } else { %>
+                                       <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
+                                       data-bs-target="#MCA">Register</button>
+                                   <% } %>
+                            </center>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+    </div>
+
+    <!-- Btech modal -->
+    <div class="modal fade" id="btech">
+        <div class="modal-dialog modal-md card">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ">Registration form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal header ends -->
+                <div class="modal-body">
+                    <h4 class="text-center bg-dark text-white">B.Tech</h4>
+                    <form action="/courseInsert" method="post" enctype="multipart/form-data">
+                        <div class="mb-2">
+                            <label for="">Name</label>
+                            <input type="text" name="cname" value="<%= uname %>" id=""
+                                class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Email</label>
+                            <input type="email" name="cmail" value="<%= umail %>" id=""
+                                placeholder="abc@gmail.com" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Mobile no</label>
+                            <input type="number" name="cmob" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">D.O.B</label>
+                            <input type="date" name="cbirth" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Address</label>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
+                                required></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Gender</label>
+                            <select name="cgen" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Education</label>
+                            <select name="ced" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">Select</option>
+                                <option value="Graduation">Graduation</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Course</label>
+                            <input type="text" name="Ccourse" id="" value="B.Tech" class="form-control" readonly autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-info text-center"
+                                type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div><!--modal body ends-->
+            </div><!--model content-->
+        </div><!--model dialog end-->
+    </div><!--model fade end-->
+    <!-- BCA model -->
+    <div class="modal fade" id="BCA">
+        <div class="modal-dialog modal-md card">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ">Registration form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal header ends -->
+                <div class="modal-body">
+                    <h4 class="text-center bg-dark text-white">BCA</h4>
+                    <form action="/courseInsert" method="post" enctype="multipart/form-data">
+                        <div class="mb-2">
+                            <label for="">Name</label>
+                            <input type="text" name="cname" value="<%= uname %>" id=""
+                                class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Email</label>
+                            <input type="email" name="cmail" value="<%= umail %>" id=""
+                                placeholder="abc@gmail.com" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Mobile no</label>
+                            <input type="number" name="cmob" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">D.O.B</label>
+                            <input type="date" name="cbirth" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Address</label>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
+                                required></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Gender</label>
+                            <select name="cgen" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Education</label>
+                            <select name="ced" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">Select</option>
+                                <option value="Graduation">Graduation</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Course</label>
+                            <input type="text" name="Ccourse" id="" value="BCA" class="form-control" readonly autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-info text-center"
+                                type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div><!--modal body ends-->
+            </div><!--model content-->
+        </div><!--model dialog end-->
+    </div><!--model fade end-->
+    <!-- MCA Model -->
+    <div class="modal fade" id="MCA">
+        <div class="modal-dialog modal-md card">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ">Registration form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal header ends -->
+                <div class="modal-body">
+                    <h4 class="text-center bg-dark text-white">MCA</h4>
+                    <form action="/courseInsert" method="post" enctype="multipart/form-data">
+                        <div class="mb-2">
+                            <label for="">Name</label>
+                            <input type="text" name="cname" value="<%= uname %>" id=""
+                                class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Email</label>
+                            <input type="email" name="cmail" value="<%= umail %>" id=""
+                                placeholder="abc@gmail.com" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Mobile no</label>
+                            <input type="number" name="cmob" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">D.O.B</label>
+                            <input type="date" name="cbirth" id="" class="form-control"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Address</label>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
+                                required></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Gender</label>
+                            <select name="cgen" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Education</label>
+                            <select name="ced" id="" class="form-control" autocomplete="off"
+                                required>
+                                <option value="">Select</option>
+                                <option value="Graduation">Graduation</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="">Course</label>
+                            <input type="text" name="Ccourse" value="MCA" id="" class="form-control" readonly autocomplete="off" required>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-info text-center"
+                                type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div><!--modal body ends-->
+            </div><!--model content-->
+        </div><!--model dialog end-->
+    </div><!--model fade end-->
+    <!-- main body ends -->
+    <%- include("./footer.ejs") %>

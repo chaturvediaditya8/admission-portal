@@ -1,0 +1,61 @@
+.weblogo{
+    width: 70px;
+    border-radius: 37px;
+}
+.navbar{
+    background: #000000!important;
+}
+.navbar-nav li{
+    padding: 0 5px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.navbar-nav li a{
+    color: #fff!important;
+    font-weight: 600;
+    font-size: 17px;
+}
+.navbar-nav li drop{
+    color: black!important;
+}
+.form_setting {
+    font-size: 20px;
+    line-height: 45px;
+}
+.sl{
+    aspect-ratio: 3/2;
+    height: 500px;
+    margin-top: 86px;
+}
+.user{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.icon i{
+    font-size: 23px;
+    line-height: 80px;
+}
+.hov:hover{
+    /* background: rgb(57, 53, 53); */
+    background: white!important;
+    line-height: 30px;
+    width: max-content;
+    border-radius: 5px;
+    color: red!important;
+    transition:all .7s;
+    /* border: 1px solid black!important; */
+}
+.main {
+    background-color: bisque;
+    margin-bottom: -50px;   
+    margin-top: -50px;
+
+}
+.binge:hover{
+    /* width: 100%; */
+    /* height: 100%; */
+    /* color: red; */
+    transform: scale(1.5);
+}

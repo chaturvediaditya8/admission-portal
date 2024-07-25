@@ -1,0 +1,75 @@
+<%- include("../header.ejs")%>
+<br><br><br>
+<h1 class="text-center mt-5">Course Edit</h1><br><br>
+<div class="container">
+       <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+                    <form action="/courseUpdate/<%=d.id%>" method="post" enctype="multipart/form-data">
+                              <div class="mb-2">
+                                  <label for="">Name</label>
+                                  <input type="text" name="cname" value="<%= d.name %>" id=""
+                                      class="form-control" autocomplete="off" required>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Email</label>
+                                  <input type="email" name="cmail" value="<%= d.email %>" id=""
+                                      placeholder="abc@gmail.com" class="form-control"
+                                      autocomplete="off" required>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Mobile no</label>
+                                  <input type="number" name="cmob" id="" value="<%= d.mobile_no%>" class="form-control"
+                                      autocomplete="off" required>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">D.O.B</label>
+                                  <input type="date" name="cbirth" id="" value="<%= d.dob%>" class="form-control"
+                                      autocomplete="off" required>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Address</label>
+                                  <textarea name="cadd" id="" class="form-control" autocomplete="off"
+                                      required><%= d.address%></textarea>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Gender</label>
+                                  <input type="radio" name="cgen" id="" value="Male" <%= d.gender=='Male' ? 'checked':'' %>> Male
+                                  <input type="radio" name="cgen" id="" value="Female" <%= d.gender=='Female' ? 'checked':'' %>> Female
+                                  <input type="radio" name="cgen" id="" value="Others" <%= d.gender=='Other' ? 'checked':'' %>> Others
+                                  <!-- <select name="cgen" id="" class="form-control" value="<%= d.gender%>" autocomplete="off"
+                                      required>
+                                      <option value="">select</option>
+                                      <option value="Male">Male</option>
+                                      <option value="Female">Female</option>
+                                      <option value="Others">Others</option>
+                                  </select> -->
+
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Education</label>
+                                  <!-- <input type="text" name="" id="" class="form-control" value="<%= d.education%>"> -->
+                                  <select name="ced" id="" value="<%= d.education%>" class="form-control" autocomplete="off"
+                                      required>
+                                      <option value="">Select</option>
+                                      <option value="10TH" <%= d.education=='10TH'?'selected':'' %>>10TH</option>
+                                      <option value="12TH" <%= d.education=='12TH'?'selected':'' %>>12TH</option>
+                                  </select>
+                              </div>
+                              <div class="mb-2">
+                                  <label for="">Course</label>
+                                  <input type="text" name="Ccourse" id="" value="<%= d.course%>" class="form-control" readonly autocomplete="off" required>
+                              </div>
+                              <div class="mb-2">
+                                  <button class="btn btn-info text-center"
+                                      type="submit">Update</button>
+                              </div>
+                    </form>
+          </div>
+          <div class="col-md-3"></div>
+       </div>
+</div>
+<center>
+          <a href="/courseDisplay" class="btn btn-info">Back</a>
+</center>
+<%- include("../footer.ejs")%>
