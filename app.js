@@ -43,5 +43,5 @@ app.use("/", web);
 
 //server create
 app.listen(port, () => {
-    console.log(`server start localhost:${port}`);
+    console.log(`server start http://localhost:${port}`);
  });

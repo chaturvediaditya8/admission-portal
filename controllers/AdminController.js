@@ -8,7 +8,8 @@ class AdminController {
   static dashboard = async (req, res) => {
     try {
       const { name, email, image } = req.data;
-      res.render("admin/dashboard", { uname: name, image: image });
+      const student = await UserModel.countDocuments({role:"user"})
+      res.render("admin/dashboard", { uname: name, image: image, s:student });
     } catch (error) {
       console.log(error);
     }
