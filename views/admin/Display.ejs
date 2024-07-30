@@ -26,7 +26,7 @@
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Id</th>
+                  <th>Sr.No</th>
                   <th>Name</th>
                   <th>Course</th>
                   <th>Email</th>
@@ -37,10 +37,11 @@
                 </tr>
               </thead>
               <tbody>
-                <% d.forEach((item)=>{ %>
+                <% i=1 %>
+                <%  d.forEach((item)=>{ %>
                   <tr>
                     <td>
-                      <%= item.id%>
+                      <%= i++%>
                     </td>
                     <td>
                       <%= item.name%>
@@ -94,12 +95,7 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-    </div>
-    <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
+    
     </section>
     <!-- /.content -->
     </div>

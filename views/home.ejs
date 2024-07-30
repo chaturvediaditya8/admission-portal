@@ -80,15 +80,15 @@
                                 Engineering
                             </p>
                             <center>
-                               <% if(btech) { %>
-                                 <a href="/courseDisplay" class="btn btn-primary mt-5 binge"> Course Display</a>
-                                <% } else { %>
-                                    <button class="btn btn-primary mt-5 binge" data-bs-toggle="modal"
-                                    data-bs-target="#btech">Register</button>
-                                <% } %>
-                                
+                                <% if(btech) { %>
+                                    <a href="/courseDisplay" class="btn btn-primary mt-5 binge"> Course Display</a>
+                                    <% } else { %>
+                                        <button class="btn btn-primary mt-5 binge" data-bs-toggle="modal"
+                                            data-bs-target="#btech">Register</button>
+                                        <% } %>
+
                             </center>
-                            
+
                         </div><!--card-body ends-->
                     </div><!--card ends-->
                 </div>
@@ -104,12 +104,12 @@
                             <center>
                                 <% if(bca) { %>
                                     <a href="/courseDisplay" class="btn btn-primary mt-3 binge"> Course Display</a>
-                                   <% } else { %>
-                                       <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
-                                       data-bs-target="#BCA">Register</button>
-                                   <% } %>
+                                    <% } else { %>
+                                        <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
+                                            data-bs-target="#BCA">Register</button>
+                                        <% } %>
                             </center>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -126,12 +126,12 @@
                             <center>
                                 <% if(mca) { %>
                                     <a href="/courseDisplay" class="btn btn-primary mt-3 binge"> Course Display</a>
-                                   <% } else { %>
-                                       <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
-                                       data-bs-target="#MCA">Register</button>
-                                   <% } %>
+                                    <% } else { %>
+                                        <button class="btn btn-primary mt-3 binge" data-bs-toggle="modal"
+                                            data-bs-target="#MCA">Register</button>
+                                        <% } %>
                             </center>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -153,34 +153,29 @@
                     <form action="/courseInsert" method="post" enctype="multipart/form-data">
                         <div class="mb-2">
                             <label for="">Name</label>
-                            <input type="text" name="cname" value="<%= uname %>" id=""
-                                class="form-control" autocomplete="off" required>
+                            <input type="text" name="cname" value="<%= uname %>" id="" class="form-control"
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Email</label>
-                            <input type="email" name="cmail" value="<%= umail %>" id=""
-                                placeholder="abc@gmail.com" class="form-control"
-                                autocomplete="off" required>
+                            <input type="email" name="cmail" value="<%= umail %>" id="" placeholder="abc@gmail.com"
+                                class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Mobile no</label>
-                            <input type="number" name="cmob" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="number" name="cmob" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">D.O.B</label>
-                            <input type="date" name="cbirth" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="date" name="cbirth" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Address</label>
-                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
-                                required></textarea>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off" required></textarea>
                         </div>
                         <div class="mb-2">
                             <label for="">Gender</label>
-                            <select name="cgen" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="cgen" id="" class="form-control" autocomplete="off" required>
                                 <option value="">select</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -190,19 +185,18 @@
                         </div>
                         <div class="mb-2">
                             <label for="">Education</label>
-                            <select name="ced" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="ced" id="" class="form-control" autocomplete="off" required>
                                 <option value="">Select</option>
                                 <option value="Graduation">Graduation</option>
                             </select>
                         </div>
                         <div class="mb-2">
                             <label for="">Course</label>
-                            <input type="text" name="Ccourse" id="" value="B.Tech" class="form-control" readonly autocomplete="off" required>
+                            <input type="text" name="Ccourse" id="" value="B.Tech" class="form-control" readonly
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
-                            <button class="btn btn-info text-center"
-                                type="submit">Submit</button>
+                            <button class="btn btn-info text-center" type="submit">Submit</button>
                         </div>
                     </form>
                 </div><!--modal body ends-->
@@ -223,34 +217,29 @@
                     <form action="/courseInsert" method="post" enctype="multipart/form-data">
                         <div class="mb-2">
                             <label for="">Name</label>
-                            <input type="text" name="cname" value="<%= uname %>" id=""
-                                class="form-control" autocomplete="off" required>
+                            <input type="text" name="cname" value="<%= uname %>" id="" class="form-control"
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Email</label>
-                            <input type="email" name="cmail" value="<%= umail %>" id=""
-                                placeholder="abc@gmail.com" class="form-control"
-                                autocomplete="off" required>
+                            <input type="email" name="cmail" value="<%= umail %>" id="" placeholder="abc@gmail.com"
+                                class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Mobile no</label>
-                            <input type="number" name="cmob" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="number" name="cmob" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">D.O.B</label>
-                            <input type="date" name="cbirth" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="date" name="cbirth" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Address</label>
-                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
-                                required></textarea>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off" required></textarea>
                         </div>
                         <div class="mb-2">
                             <label for="">Gender</label>
-                            <select name="cgen" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="cgen" id="" class="form-control" autocomplete="off" required>
                                 <option value="">select</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -260,19 +249,18 @@
                         </div>
                         <div class="mb-2">
                             <label for="">Education</label>
-                            <select name="ced" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="ced" id="" class="form-control" autocomplete="off" required>
                                 <option value="">Select</option>
                                 <option value="Graduation">Graduation</option>
                             </select>
                         </div>
                         <div class="mb-2">
                             <label for="">Course</label>
-                            <input type="text" name="Ccourse" id="" value="BCA" class="form-control" readonly autocomplete="off" required>
+                            <input type="text" name="Ccourse" id="" value="BCA" class="form-control" readonly
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
-                            <button class="btn btn-info text-center"
-                                type="submit">Submit</button>
+                            <button class="btn btn-info text-center" type="submit">Submit</button>
                         </div>
                     </form>
                 </div><!--modal body ends-->
@@ -293,34 +281,29 @@
                     <form action="/courseInsert" method="post" enctype="multipart/form-data">
                         <div class="mb-2">
                             <label for="">Name</label>
-                            <input type="text" name="cname" value="<%= uname %>" id=""
-                                class="form-control" autocomplete="off" required>
+                            <input type="text" name="cname" value="<%= uname %>" id="" class="form-control"
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Email</label>
-                            <input type="email" name="cmail" value="<%= umail %>" id=""
-                                placeholder="abc@gmail.com" class="form-control"
-                                autocomplete="off" required>
+                            <input type="email" name="cmail" value="<%= umail %>" id="" placeholder="abc@gmail.com"
+                                class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Mobile no</label>
-                            <input type="number" name="cmob" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="number" name="cmob" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">D.O.B</label>
-                            <input type="date" name="cbirth" id="" class="form-control"
-                                autocomplete="off" required>
+                            <input type="date" name="cbirth" id="" class="form-control" autocomplete="off" required>
                         </div>
                         <div class="mb-2">
                             <label for="">Address</label>
-                            <textarea name="cadd" id="" class="form-control" autocomplete="off"
-                                required></textarea>
+                            <textarea name="cadd" id="" class="form-control" autocomplete="off" required></textarea>
                         </div>
                         <div class="mb-2">
                             <label for="">Gender</label>
-                            <select name="cgen" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="cgen" id="" class="form-control" autocomplete="off" required>
                                 <option value="">select</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -330,19 +313,18 @@
                         </div>
                         <div class="mb-2">
                             <label for="">Education</label>
-                            <select name="ced" id="" class="form-control" autocomplete="off"
-                                required>
+                            <select name="ced" id="" class="form-control" autocomplete="off" required>
                                 <option value="">Select</option>
                                 <option value="Graduation">Graduation</option>
                             </select>
                         </div>
                         <div class="mb-2">
                             <label for="">Course</label>
-                            <input type="text" name="Ccourse" value="MCA" id="" class="form-control" readonly autocomplete="off" required>
+                            <input type="text" name="Ccourse" value="MCA" id="" class="form-control" readonly
+                                autocomplete="off" required>
                         </div>
                         <div class="mb-2">
-                            <button class="btn btn-info text-center"
-                                type="submit">Submit</button>
+                            <button class="btn btn-info text-center" type="submit">Submit</button>
                         </div>
                     </form>
                 </div><!--modal body ends-->

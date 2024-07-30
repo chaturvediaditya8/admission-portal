@@ -28,10 +28,11 @@ app.use(flash());
 
 //connect db
 connectDB()
-//data get
+
+
 //parse application/x-www-form-unlencoded
 app.use(express.urlencoded({ extended: false}))
-//8461987146
+
 
 //EJS Set html css
 app.set('view engine', 'ejs');
